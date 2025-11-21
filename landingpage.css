@@ -7,7 +7,7 @@ body {
 }
 
 body {
-    background-image: url("Pages/ZPictures/group.jpg");
+    background-image: url("Pictures/group.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -155,4 +155,5 @@ header a {
     }
 
 }
+
 
