@@ -7,7 +7,7 @@ body {
 }
 
 body {
-    background-image: url("ZPictures/group.jpg");
+    background-image: url("group.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -153,4 +153,5 @@ header a {
     .navbar .nav-list li a {
         font-size: 16px;
     }
+
 }
