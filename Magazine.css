@@ -1,0 +1,339 @@
+body {
+    background: url(ZPictures/sampleee.jpg) center/cover no-repeat;
+    background-color: rgb(113, 126, 245);
+    font-family: 'Georgia', serif;
+}
+
+header a {
+    text-decoration: none;
+    color: #2e3b23;
+}
+
+.hero {
+    margin: 50px 50px 0 50px;
+    border-radius: 40px 40px 0 0;
+    height: 550px;
+    background: url(ZPictures/group.jpg) center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: xx-large;
+    color: white;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    margin: 0px;
+    font-size: 200px;
+    text-shadow: 0 2px 6px black;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', serif;
+    letter-spacing: 3px;
+}
+
+.hero button {
+    background: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.navbar {
+    border-radius: 50px;
+    background-color: #2e3b23;
+    padding: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 0px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.navbar .nav-list {
+    border-radius: 30px;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.navbar .nav-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.navbar .nav-list li a {
+
+    text-decoration: none;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+
+.activities .Title {
+    font-size: 100px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.activities .Def {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.activities {
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: aliceblue;
+    padding: 60px;
+    text-align: center;
+}
+
+.cards-btn-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cards-btn {
+    padding: 15px 40px;
+    font-size: 20px;
+    background-color: #2e3b23;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cards-btn:hover {
+    background-color: #3f6d2c;
+}
+
+
+.cards-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: nowrap;
+    /* no wrapping, scroll horizontally */
+    transition: transform 0.3s ease-in-out;
+    gap: 20px;
+}
+
+.card {
+    flex: 0 0 280px;
+    /* fixed width for each card */
+    height: 330px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+    .card {
+        flex: 0 0 220px;
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cards {
+        flex-wrap: wrap;
+        /* wrap cards into rows */
+        justify-content: center;
+    }
+
+    .card {
+        flex: 0 0 45%;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .slide-btn {
+        display: none;
+    }
+
+    /* hide arrows on mobile */
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        flex: 0 0 90%;
+        height: 180px;
+    }
+}
+.prev,
+.next {
+    position: absolute;
+    /* relative to cards-wrapper */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/**for overlay **/
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 0 0 15px 15px;
+
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.card.active .overlay {
+    opacity: 1;
+}
+
+.features {
+    margin: 0 50px 0 50px;
+    border-radius: 0 0 50px 50px;
+    background: #3b572c;
+    color: white;
+    padding: 70px 40px;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.icon {
+    font-size: 16px;
+}
+
+.card:hover img {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.viewer-content {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    gap: 50px;
+    /* increase space between image and description */
+    align-items: flex-start;
+    max-width: 95vw;
+    /* more room for description */
+    max-height: 90vh;
+    overflow-y: auto;
+    /* allow scrolling if content is too tall */
+}
+
+.viewer-content img {
+    width: 400px;
+    /* Fixed width (you can change this) */
+    height: 566px;
+    /* Matching 1414×2000 aspect ratio */
+    object-fit: cover;
+    /* Keep the crop clean */
+    border-radius: 10px;
+}
+
+
+.viewer-content p {
+    font-size: 22px;
+    line-height: 1.6;
+    max-width: 50vw;
+    /* text box width, more space for description */
+    word-wrap: break-word;
+    color: black;
+    /* readable on white background */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
