@@ -1,15 +1,11 @@
 let scrollAmount = 0;
 const cards = document.getElementById("cards");
-const cardWidth = 280; // width of one card
+const cardWidth = 280;
 
 function slide(direction) {
     scrollAmount += direction * cardWidth;
-
-    // prevent scrolling beyond first/last card
     const maxScroll = cards.scrollWidth - cards.parentElement.clientWidth;
-    if (scrollAmount < 0) scrollAmount = 0;
-    if (scrollAmount > maxScroll) scrollAmount = maxScroll;
-
+    scrollAmount = Math.max(0, Math.min(scrollAmount, maxScroll));
     cards.style.transform = `translateX(-${scrollAmount}px)`;
 }
 
@@ -17,32 +13,37 @@ function toggleOverlay(card) {
     card.classList.toggle("active");
 }
 
-function Activities() {
+function goToActivities() {
     document.getElementById("activities").scrollIntoView({ behavior: "smooth" });
 }
 
-function AboutUs() {
+function goToAboutUs() {
     document.getElementById("aboutus").scrollIntoView({ behavior: "smooth" });
 }
 
-function toggleAndGo(card, url) {
+function toggleAndNavigate(card, url) {
     card.classList.toggle("active");
     setTimeout(() => {
         window.location.href = url;
-    }, 300); // wait for overlay animation
+    }, 300);
 }
 
 function openViewer(card) {
-    const img = card.querySelector("img").src;
-    const desc = card.querySelector(".overlay").innerText;
+    const viewer = document.getElementById("viewer");
+    const img = card.querySelector("img");
+    const overlay = card.querySelector(".overlay");
 
-    document.getElementById("viewer-img").src = img;
-    document.getElementById("viewer-desc").innerText = desc;
+    document.getElementById("viewer-img").src = img.src;
+    document.getElementById("viewer-desc").innerHTML = overlay.innerHTML;
 
-    document.getElementById("viewer").style.display = "flex";
+    viewer.style.display = "flex";
+    setTimeout(() => viewer.classList.add("show"), 10);
 }
 
 function closeViewer() {
-    document.getElementById("viewer").style.display = "none";
+    const viewer = document.getElementById("viewer");
+    viewer.classList.remove("show");
+    setTimeout(() => {
+        viewer.style.display = "none";
+    }, 400);
 }
-
