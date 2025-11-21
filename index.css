@@ -58,11 +58,15 @@ header a {
     cursor: pointer;
     font-size: 15px;
 }
-
+.hero .Title {
+    font-size: 200px;
+    font-weight: bold;
+    color: rgb(229, 215, 196);
+    margin-bottom: 20px;
+}
 /* Navbar */
 .navbar {
     border-radius: 50px;
-    background-color: #2e3b23;
     padding: 20px 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
@@ -86,16 +90,20 @@ header a {
 }
 
 .navbar .nav-list li {
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .navbar .nav-list li a {
-    text-decoration: none;
-    font-size: 22px;
-    color: #fff;
-    font-weight: 500;
+    background-color: rgb(136, 144, 99);
+        font-weight: 600;
+        font-size: larger;
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
 }
 .navbar .nav-list li a {
     padding: 8px 16px;
@@ -153,7 +161,4 @@ header a {
     .navbar .nav-list li a {
         font-size: 16px;
     }
-
 }
-
-

@@ -17,6 +17,7 @@ body {
     /* optional: keeps it fixed while scrolling */
     font-family: Georgia, 'Times New Roman', Times, serif
 }
+
 header a {
     text-decoration: none;
     color: #2e3b23;
@@ -51,15 +52,17 @@ header a {
     border-radius: 0;
     background-color: rgb(136, 144, 99);
     font-weight: 600;
-        font-size: larger;
+    font-size: larger;
     text-decoration: none;
     font-size: 1.2rem;
     color: rgb(255, 255, 255);
     font-weight: 500;
 }
+
 .nav-list li a:hover {
     text-decoration: underline;
 }
+
 .navbar .nav-list li a {
     padding: 8px 16px;
     /* add some padding so background shows */
@@ -75,35 +78,7 @@ header a {
     color: #fff;
     /* keep text white */
 }
-/* Activities */
 
-.activities .Title{
-    font-size: 100px;
-    font-weight: bold;
-    color: rgb(54, 64, 36);
-    margin-bottom: 20px;
-}
-.activities {
-    border-radius: 0 0 30px 30px;
-    margin: 0 50px;
-    background-color: rgb(229, 215, 196);
-    padding: 60px;
-    text-align: center;
-}
-
-.activities .Title {
-    font-size: 6vw;
-    /* scales with viewport */
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.activities .Def {
-    font-size: 2vw;
-    margin-bottom: 40px;
-}
-
-/* Cards */
 .cards {
     display: flex;
     justify-content: center;
@@ -132,6 +107,7 @@ header a {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
+
 .card .name {
     text-align: center;
     font-size: 1rem;
@@ -169,6 +145,7 @@ header a {
     transition: 0.3s ease;
     box-sizing: border-box;
 }
+
 .card.active .overlay {
     opacity: 1;
 }
@@ -246,6 +223,21 @@ header a {
     cursor: pointer;
 }
 
+.features .About {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: rgb(54, 64, 36);
+}
+.features .Members {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: rgb(54, 64, 36);
+}
+
 /* ========================= */
 /* Responsive Media Queries  */
 /* ========================= */
@@ -272,29 +264,29 @@ header a {
 /* Mobile phones */
 @media (max-width: 600px) {
     .navbar {
-            flex-direction: column;
-            padding: 15px;
-            margin: 0 10px;
-            align-items: center;
-            /* centers child elements horizontally */
-        }
-    
-        .navbar .nav-list {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* centers nav items horizontally */
-            gap: 10px;
-        }
-    
-        .navbar .nav-list li a {
-            font-weight: 600;
-            font-size: larger;
-            display: inline-block;
-            font-size: 1rem;
-            text-align: center;
-            /* centers text inside the link */
-        }
+        flex-direction: column;
+        padding: 15px;
+        margin: 0 10px;
+        align-items: center;
+        /* centers child elements horizontally */
+    }
+
+    .navbar .nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* centers nav items horizontally */
+        gap: 10px;
+    }
+
+    .navbar .nav-list li a {
+        font-weight: 600;
+        font-size: larger;
+        display: inline-block;
+        font-size: 1rem;
+        text-align: center;
+        /* centers text inside the link */
+    }
 
     .activities {
         margin: 0 10px;
