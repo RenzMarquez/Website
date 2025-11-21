@@ -125,31 +125,32 @@ header a {
 /* Overlay */
 .overlay {
     position: absolute;
-    bottom: 0;
+    top: 50%;
     left: 50%;
-    /* move to horizontal center */
-    transform: translateX(-50%);
-    /* adjust to truly center */
-    width: auto;
-    /* shrink to fit content */
-    max-width: 90%;
-    /* prevent overflow */
-    padding: 10px 20px;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    font-size: 1rem;
-    font-weight: 600;
+    transform: translate(-50%, -50%);
+    width: 90%;
     text-align: center;
-    border-radius: 10px;
+    color: white;
     opacity: 0;
     transition: 0.3s ease;
-    box-sizing: border-box;
 }
 
 .card.active .overlay {
     opacity: 1;
 }
 
+.overlay-title {
+    font-size: 2.5rem;
+    /* big bold name */
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.overlay-desc {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
 /* Features */
 .features {
     margin: 0 50px;
@@ -171,19 +172,38 @@ header a {
 }
 
 /* Viewer Modal */
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    /* hidden until opened */
+    justify-content: center;
+    /* center horizontally */
+    align-items: center;
+    /* center vertically */
+    z-index: 9999;
+}
+
 .viewer-content {
     background: white;
     padding: 20px;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
-    /* side by side instead of stacked */
+    /* side by side (image + text) */
     gap: 20px;
     align-items: flex-start;
-    /* align items at the top */
-    max-width: 95vw;
-    max-height: 90vh;
+    justify-content: center;
+    /* center content inside */
+    max-width: 80vw;
+    /* responsive width */
+    max-height: 80vh;
     overflow-y: auto;
+    box-sizing: border-box;
 }
 
 .viewer-content img {
@@ -253,6 +273,19 @@ header a {
 
 /* Mobile phones */
 @media (max-width: 600px) {
+    .viewer-content {
+            flex-direction: column;
+            align-items: center;
+            max-width: 95vw;
+            max-height: 90vh;
+        }
+    
+        .viewer-content img,
+        .viewer-content p {
+            width: 100%;
+        }
+    
+
     .navbar {
         flex-direction: column;
         padding: 15px;
