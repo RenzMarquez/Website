@@ -138,27 +138,61 @@ header a {
 
 /* Mobile phones */
 @media (max-width: 600px) {
+    body {
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        /* prevent fixed background issues on mobile */
+    }
+
     .hero {
         min-height: 50vh;
         padding: 20px;
+        font-size: 5vw;
+        /* scale text better */
+        text-align: center;
     }
 
     .hero h1 {
-        font-size: 10vw;
+        font-size: 12vw;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .hero .Title {
+        font-size: 12vw;
+        margin-bottom: 10px;
+    }
+
+    .hero button {
+        font-size: 4vw;
+        padding: 10px 20px;
+        width: auto;
     }
 
     .navbar {
         flex-direction: column;
         padding: 15px;
-        width: 90%;
+        width: 100%;
+        max-width: none;
+        margin: 10px auto;
     }
 
     .navbar .nav-list {
         flex-direction: column;
         gap: 10px;
+        width: 100%;
+    }
+
+    .navbar .nav-list li {
+        width: 100%;
+        justify-content: center;
     }
 
     .navbar .nav-list li a {
-        font-size: 16px;
+        font-size: 5vw;
+        padding: 10px 20px;
+        width: 90%;
+        text-align: center;
     }
 }
