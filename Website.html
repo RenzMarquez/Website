@@ -6,96 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Website.css">
     <title>Regal Crest</title>
-    <style>
+</head>
 
-    </style>
-    <body>
-        <header>
-            <nav class="navbar">
-                <ul class="nav-list">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="#activities">ACTIVITES</a></li>
-                    <li><a href="Aboutus.html">ABOUT US</a></li>
-                </ul>
-            </nav>
-        </header>
-    
-    
-    
-        <section class="activities" id="activities">
-            <h2 class="Title">Activities</h2>
-            <p class="Def">We took part in several school activities, including the 3D Printing Seminar, where we printed 3D cat models. We also
-            created a magazine about Philippine historical sites, participated in the Freshies Salubong welcoming event, and
-            attended the AgentBlazer Champion Workshop. These activities helped us learn new skills, explore history, and get
-            involved in campus life.</p>
-            <div class="cards">
-                <div class="card" onclick="openViewer(this)">
-                    <img src="ZPictures/3dd.jpg" alt="3D Model">
-                    <div class="name">3D Model</div>
-                    <div class="overlay">
-                        <hr>
-                        <pre><h1>3D-Printed Cat Models</h1>
-                        We printed pre-designed 3D cat models 
-                        during the 3D Printing Seminar. 
-                        These prints helped us understand how the 
-                        machines work and how designs are brought to life.
-                       </pre></div>
-                </div>
-            
-                <div class="card" onclick="openViewer(this)">
-                    <img src="ZPictures/Magazine.jpg" alt="Magazine Cover">
-                    <div class="name">Magazine Cover</div>
-                    <div class="overlay"><pre>
-                                            <h1>Readings in Philippine History Magazine</h1>
-                                            We created a magazine for Readings in Philippine 
-                                            History show casing the different places we visited. 
-                                            Each spread highlights  the background and 
-                                            historical significance of every location.
-                                           </pre></div>
-                </div>
-            
-                <div class="card" onclick="openViewer(this)">
-                    <img src="ZPictures/SalesForce.jpg" alt="Front Design">
-                    <div class="name">AgentBlazer</div>
-                    <div class="overlay"><pre><h1>AgentBlazer</h1>
-                        Champion Workshop Certificate We received our 
-                        AgentBlazer Champion Workshop certificate after 
-                        completing the training. It recognizes the skills 
-                        and knowledge we gained throughout the session.</pre> </div>
-                </div>
-            
-                <div class="card" onclick="openViewer(this)">
-                    <img src="ZPictures/3d print.jpg" alt="Magazine Layout">
-                    <div class="name">3d print</div>
-                    <div class="overlay"><pre><h1>3D Printing Seminar</h1>
-                        We attended a 3D printing seminar where we 
-                        learned how 3D printers work, watched a live 
-                        demo, and discovered how this technology can 
-                        help us with future school projects and careers.</pre></div>
-                </div>
-            
-                <div class="card" onclick="openViewer(this)">
-                    <img src="ZPictures/try.jpg" alt="Try Concept">
-                    <div class="name">Salubong</div>
-                    <div class="overlay"><pre><h1>Freshies Salubong</h1>
-                        We took part in the Freshies Salubong, a school 
-                        event dedicated to welcoming new students. It was 
-                        a fun and engaging experience that helped us 
-                        connect with our campus community.</pre></div>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#activities">ACTIVITIES</a></li>
+                <li><a href="Aboutus.html">ABOUT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="activities" id="activities">
+        <h2 class="Title">Activities</h2>
+        <p class="Def">
+            We took part in several school activities, including the 3D Printing Seminar, where we printed 3D cat
+            models.
+            We also created a magazine about Philippine historical sites, participated in the Freshies Salubong
+            welcoming event,
+            and attended the AgentBlazer Champion Workshop. These activities helped us learn new skills, explore
+            history,
+            and get involved in campus life.
+        </p>
+
+        <div class="cards" id="cards">
+            <div class="card" onclick="openViewer(this)">
+                <img src="ZPictures/3dd.jpg" alt="3D Printed Cat Model">
+                <div class="name">3D Model</div>
+                <div class="overlay">
+                    <h1>3D-Printed Cat Models</h1>
+                    <p>We printed pre-designed 3D cat models during the 3D Printing Seminar. These prints helped us
+                        understand how the machines work and how designs are brought to life.</p>
                 </div>
             </div>
-                
-                
-        </section>
 
-        <div id="viewer" class="viewer">
-            <div class="viewer-content">
-                <span class="close" onclick="closeViewer()">✖</span>
-                <img id="viewer-img" src="">
-                <p id="viewer-desc"></p>
+            <div class="card" onclick="openViewer(this)">
+                <img src="ZPictures/Magazine.jpg" alt="Philippine History Magazine">
+                <div class="name">Magazine Cover</div>
+                <div class="overlay">
+                    <h1>Readings in Philippine History Magazine</h1>
+                    <p>We created a magazine showcasing the different places we visited. Each spread highlights the
+                        background and historical significance of every location.</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="openViewer(this)">
+                <img src="ZPictures/SalesForce.jpg" alt="AgentBlazer Certificate">
+                <div class="name">AgentBlazer</div>
+                <div class="overlay">
+                    <h1>AgentBlazer</h1>
+                    <p>We received our AgentBlazer Champion Workshop certificate after completing the training. It
+                        recognizes the skills and knowledge we gained throughout the session.</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="openViewer(this)">
+                <img src="ZPictures/3d print.jpg" alt="3D Printing Seminar">
+                <div class="name">3D Print</div>
+                <div class="overlay">
+                    <h1>3D Printing Seminar</h1>
+                    <p>We attended a 3D printing seminar where we learned how 3D printers work, watched a live demo, and
+                        discovered how this technology can help us with future school projects and careers.</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="openViewer(this)">
+                <img src="ZPictures/try.jpg" alt="Freshies Salubong Event">
+                <div class="name">Salubong</div>
+                <div class="overlay">
+                    <h1>Freshies Salubong</h1>
+                    <p>We took part in the Freshies Salubong, a school event dedicated to welcoming new students. It was
+                        a fun and engaging experience that helped us connect with our campus community.</p>
+                </div>
             </div>
         </div>
-        <script src="Website.js"></script>
-    </body>
-    
-    </html>
+    </section>
+
+    <div id="viewer" class="viewer">
+        <div class="viewer-content">
+            <span class="close" onclick="closeViewer()">✖</span>
+            <img id="viewer-img" src="" alt="Expanded view">
+            <p id="viewer-desc"></p>
+        </div>
+    </div>
+
+    <script src="Website.js"></script>
+</body>
+
+</html>
