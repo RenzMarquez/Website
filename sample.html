@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Website.css">
+    <title>Regal Crest</title>
+</head>
+
+<body>
+    <!-- HEADER + NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="Website.html">Home</a></li>
+                <li><a href="#" onclick="Activities()">Activities</a></li>
+                <li><a href="#" onclick="AboutUs()">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>WEBSITE</h1>
+        <button onclick="Activities()">Explore</button>
+    </section>
+
+    <!-- ACTIVITIES SECTION -->
+    <main>
+        <section class="activities" id="activities">
+            <h2 class="Title">Activities</h2>
+            <p class="Def">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis minima quae optio,
+                laudantium exercitationem, iure necessitatibus sequi unde sed rerum minus impedit fugit fugiat! Illum
+                quod earum quidem voluptas ipsam!</p>
+
+            <div class="cards-wrapper">
+                <div class="cards" id="cards">
+                    <div class="card" onclick="openViewer(this)">
+                        <img src="ZPictures/3d.jpg" alt="3D Project">
+                        <div class="overlay">This is a sample description.</div>
+                    </div>
+                    <div class="card" onclick="openViewer(this)">
+                        <img src="ZPictures/Magazine.jpg" alt="Magazine Project">
+                        <div class="overlay">Magazine project description.</div>
+                    </div>
+                    <div class="card" onclick="openViewer(this)">
+                        <img src="ZPictures/Front.jpg" alt="Front Project">
+                        <div class="overlay">This is a sample description.</div>
+                    </div>
+                    <div class="card" onclick="openViewer(this)">
+                        <img src="ZPictures/Magazine.jpg" alt="Magazine Project">
+                        <div class="overlay">Magazine project description.</div>
+                    </div>
+                    <div class="card" onclick="openViewer(this)">
+                        <img src="ZPictures/try.jpg" alt="Try Project">
+                        <div class="overlay">Magazine project description.</div>
+                    </div>
+                </div>
+                <!-- Optional slider buttons -->
+                <button class="prev" onclick="slide(-1)">&#10094;</button>
+                <button class="next" onclick="slide(1)">&#10095;</button>
+            </div>
+
+            <div class="cards-btn-container">
+                <button class="cards-btn" onclick="location.href='Magazine.html'">See More</button>
+            </div>
+        </section>
+
+        <!-- MEMBERS / FEATURES SECTION -->
+        <section class="features" id="aboutus">
+            <h2>Members</h2>
+            <div class="icons">
+                <div class="icon">Marquez, Renz Louie A.</div>
+                <div class="icon">Santos, Sean Patrick S</div>
+                <div class="icon">Персональные тренеры</div>
+                <div class="icon">Персональные тренеры</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- IMAGE VIEWER MODAL -->
+    <div id="viewer" class="viewer">
+        <div class="viewer-content">
+            <span class="close" onclick="closeViewer()">✖</span>
+            <img id="viewer-img" src="" alt="Viewer Image">
+            <p id="viewer-desc"></p>
+        </div>
+    </div>
+
+    <script src="sample.js"></script>
+</body>
+
+</html>

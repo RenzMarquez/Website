@@ -1,0 +1,288 @@
+/* Reset & base */
+html,
+body {
+    height: 100%;
+    /* stretch to full viewport height */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("ZPictures/sampleee.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* scales image to cover entire area */
+    background-attachment: fixed;
+    /* optional: keeps it fixed while scrolling */
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+header a {
+    text-decoration: none;
+    color: #2e3b23;
+}
+
+/* Navbar (same width as activities) */
+.navbar {
+    border-radius: 0;
+    background-color: #2e3b23;
+    padding: 20px 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 50px;
+    box-sizing: border-box;
+}
+
+.navbar .nav-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    flex-wrap: wrap;
+    /* allow wrapping on small screens */
+}
+
+.navbar .nav-list li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 500;
+}
+.nav-list li a:hover {
+    text-decoration: underline;
+}
+.navbar .nav-list li a {
+    padding: 8px 16px;
+    /* add some padding so background shows */
+    border-radius: 8px;
+    /* rounded corners */
+    transition: 0.3s ease;
+    /* smooth animation */
+}
+
+.navbar .nav-list li a:hover {
+    background-color: #3f6d2c;
+    /* dark green background */
+    color: #fff;
+    /* keep text white */
+}
+/* Activities */
+.activities {
+    border-radius: 0 0 30px 30px;
+    margin: 0 50px;
+    background-color: aliceblue;
+    padding: 60px;
+    text-align: center;
+}
+
+.activities .Title {
+    font-size: 6vw;
+    /* scales with viewport */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.activities .Def {
+    font-size: 2vw;
+    margin-bottom: 40px;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    /* wrap cards on smaller screens */
+}
+
+.card {
+    width: 260px;
+    height: 330px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card:hover img {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0 0 15px 15px;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.card.active .overlay {
+    opacity: 1;
+}
+
+/* Features */
+.features {
+    margin: 0 50px;
+    border-radius: 0 0 50px 50px;
+    background: #3b572c;
+    color: white;
+    padding: 70px 40px;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.icon {
+    font-size: 1rem;
+}
+
+/* Viewer Modal */
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.viewer-content {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    /* stack on small screens */
+    gap: 20px;
+    align-items: center;
+    max-width: 95vw;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.viewer-content img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.viewer-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 90%;
+    word-wrap: break-word;
+    color: black;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* ========================= */
+/* Responsive Media Queries  */
+/* ========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .activities {
+        padding: 40px;
+    }
+
+    .activities .Title {
+        font-size: 8vw;
+    }
+
+    .activities .Def {
+        font-size: 2.5vw;
+    }
+
+    .navbar {
+        margin: 0 20px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        margin: 0 10px;
+    }
+
+    .navbar .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar .nav-list li a {
+        font-size: 1rem;
+    }
+
+    .activities {
+        margin: 0 10px;
+        padding: 30px;
+    }
+
+    .activities .Title {
+        font-size: 10vw;
+    }
+
+    .activities .Def {
+        font-size: 4vw;
+    }
+
+    .cards {
+        gap: 15px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .features {
+        margin: 0 10px;
+        padding: 40px 20px;
+    }
+
+    .icons {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+}
